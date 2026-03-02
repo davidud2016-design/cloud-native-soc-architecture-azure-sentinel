@@ -1,0 +1,4 @@
+SecurityEvent
+| where EventID in (4728, 4732, 4756)
+| where GroupName in ("Domain Admins", "Enterprise Admins", "Administrators")
+| project TimeGenerated, SubjectUserName, TargetUserName, GroupName
