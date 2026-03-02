@@ -1,0 +1,4 @@
+SigninLogs
+| where RiskLevelDuringSignIn in ("high", "medium")
+| where ResultType == 0
+| project TimeGenerated, UserPrincipalName, IPAddress, RiskLevelDuringSignIn
