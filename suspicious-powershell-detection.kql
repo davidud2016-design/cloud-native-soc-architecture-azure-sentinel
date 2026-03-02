@@ -1,0 +1,5 @@
+SecurityEvent
+| where EventID == 4688
+| where Process has "powershell"
+| where CommandLine contains "-enc"
+| project TimeGenerated, Account, Computer, CommandLine
